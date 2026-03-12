@@ -1,0 +1,132 @@
+Subject: [PATCH] Bump actions/checkout from 4 to 6
+---
+Index: .github/workflows/0-welcome.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.github/workflows/0-welcome.yml b/.github/workflows/0-welcome.yml
+--- a/.github/workflows/0-welcome.yml	(revision 28d91dfa66dcfaea10e37d13971e66c1f7be146e)
++++ b/.github/workflows/0-welcome.yml	(revision e39fe39556f667c6ace34caeff33bf35d5829d0b)
+@@ -24,7 +24,7 @@
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+       - id: get_step
+         run: |
+           echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
+@@ -50,7 +50,7 @@
+     steps:
+       # We'll need to check out the repository so that we can edit README.md.
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+         with:
+           fetch-depth: 0 # Let's get all the branches.
+ 
+Index: .github/workflows/1-create-a-branch.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.github/workflows/1-create-a-branch.yml b/.github/workflows/1-create-a-branch.yml
+--- a/.github/workflows/1-create-a-branch.yml	(revision 28d91dfa66dcfaea10e37d13971e66c1f7be146e)
++++ b/.github/workflows/1-create-a-branch.yml	(revision e39fe39556f667c6ace34caeff33bf35d5829d0b)
+@@ -22,7 +22,7 @@
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+       - id: get_step
+         run: |
+           echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
+@@ -52,7 +52,7 @@
+     steps:
+       # We'll need to check out the repository so that we can edit the README.
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+         with:
+           fetch-depth: 0 # Let's get all the branches.
+ 
+Index: .github/workflows/2-commit-a-file.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.github/workflows/2-commit-a-file.yml b/.github/workflows/2-commit-a-file.yml
+--- a/.github/workflows/2-commit-a-file.yml	(revision 28d91dfa66dcfaea10e37d13971e66c1f7be146e)
++++ b/.github/workflows/2-commit-a-file.yml	(revision e39fe39556f667c6ace34caeff33bf35d5829d0b)
+@@ -24,7 +24,7 @@
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+       - id: get_step
+         run: |
+           echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
+@@ -50,7 +50,7 @@
+     steps:
+       # We'll need to check out the repository so that we can edit the README.
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+         with:
+           fetch-depth: 0 # Let's get all the branches.
+ 
+Index: .github/workflows/3-open-a-pull-request.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.github/workflows/3-open-a-pull-request.yml b/.github/workflows/3-open-a-pull-request.yml
+--- a/.github/workflows/3-open-a-pull-request.yml	(revision 28d91dfa66dcfaea10e37d13971e66c1f7be146e)
++++ b/.github/workflows/3-open-a-pull-request.yml	(revision e39fe39556f667c6ace34caeff33bf35d5829d0b)
+@@ -25,7 +25,7 @@
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+       - id: get_step
+         run: |
+           echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
+@@ -53,7 +53,7 @@
+     steps:
+       # We'll need to check out the repository so that we can edit the README.
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+         with:
+           fetch-depth: 0 # Let's get all the branches.
+           ref: my-first-branch # Important, as normally `pull_request` event won't grab other branches.
+Index: .github/workflows/4-merge-your-pull-request.yml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.github/workflows/4-merge-your-pull-request.yml b/.github/workflows/4-merge-your-pull-request.yml
+--- a/.github/workflows/4-merge-your-pull-request.yml	(revision 28d91dfa66dcfaea10e37d13971e66c1f7be146e)
++++ b/.github/workflows/4-merge-your-pull-request.yml	(revision e39fe39556f667c6ace34caeff33bf35d5829d0b)
+@@ -24,7 +24,7 @@
+     runs-on: ubuntu-latest
+     steps:
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+       - id: get_step
+         run: |
+           echo "current_step=$(cat ./.github/steps/-step.txt)" >> $GITHUB_OUTPUT
+@@ -50,7 +50,7 @@
+     steps:
+       # We'll need to check out the repository so that we can edit the README.
+       - name: Checkout
+-        uses: actions/checkout@v4
++        uses: actions/checkout@v6
+         with:
+           fetch-depth: 0 # Let's get all the branches.
+ 
